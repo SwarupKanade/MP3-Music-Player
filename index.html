@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS MUSIC PLAYER</title>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="card-container">
+		<a href="#" class="bar" onclick="listopen()"><i class="fa fa-bars" style="position: absolute;"></i></a>
+	<span class="pro">JS MUSIC PLAYER</span>
+	<a href="#" id ="downloadsong" download><i class="fa fa-download" style="position: absolute; right: 20px; color: #fff;"></i></a>
+	<br><br><br>
+	<img id="coverimg" class="round rotate" onError="this.src='cover1.jpg'" height="180px" width="180px" alt="Cover" />
+	<h3 id="musictitle">Title</h3>
+	<h6 id="time">00:00 - 00:00</h6>
+	<div class="seek"><div class="fill"></div></div>
+	<div class="skills">
+		<h6>Controls</h6>
+		<div class="audio-btns">
+	        <div class="play-btns">
+	          <a href="#" onclick="prevAudio()"><i class="fa fa-backward"></i></a>
+	          <a href="#" id="play-pause" onclick="togglePlayPause()"><i class="fa fa-pause"></i></a>
+	          <a href="#" onclick="nextAudio()"><i class="fa fa-forward"></i></a>
+	        </div>
+
+	        <div class="repeat-btns">
+	          <a href="#" id="ds" onclick="decreaseSpeed()"><i class="fa fa-fast-backward"></i></a>
+	          <span>
+	            <a href="#" id="dve" onclick="decreaseVolume()"><i id="dv" class="fas fa-minus volume"></i></a>
+	            <a href="#"><i id="volume" class="fa fa-volume-up"></i></a>
+	            <a href="#" id="ive" onclick="increaseVolume()"><i id="iv" class="fas fa-plus volume"></i></a>
+	          </span>
+	          <a href="#" id="is" onclick="increaseSpeed()"><i class="fa fa-fast-forward"></i></a>
+	        </div>
+      	</div>
+	</div>
+	<div id="listcontent" class="overlay">
+		<a href="#" onclick="listclose()" class="bar"><i class="fa fa-window-close" style="position: absolute; font-size: 16px;"></i></a>
+    	<div class="card-overlay">
+    	<ol type="1" id="songslist">
+	  		
+		</ol> 
+    </div>
+  </div>
+</div>
+<footer>
+	<p>
+		Created with <i class="fa fa-heart"></i> by
+		<a target="_blank" href="#">_Students_</a>
+		Design made by
+		<a target="_blank" href="#">Coders</a>
+	</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script src="js/app.js?version=1.0"></script>
+</body>
+</html>
